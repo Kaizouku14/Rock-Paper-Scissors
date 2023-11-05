@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper Scissors</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+      <span class="Title">Rock Paper Scissors</span>
+
+       <div class="div-content">
+
+            <div class="result-board">
+               <p>You  <strong><span id="player"> </span></strong>- 
+                  vs - <strong><span id="computer"> </span></strong> Computer
+               </p>
+
+               <p>
+               <strong><span id="result"></span></strong> 
+               </p>
+
+               <p>
+                  wins : <strong><span id ="win-id">0</span></strong> -
+                  losses : <strong><span id ="lose-id">0</span></strong> -
+                  ties : <strong><span id="tie-id">0</span></strong>
+               </p>
+            </div>
+
+             <p>Choose item</p>
+           <div class="items">
+                <div class="circle">
+                  <button id="paper-button"><i style="font-size:24px" class="fa">&#xf256;</i>
+                        <div class="tooltip">
+                           <span class="tooltip-text">Paper</span>
+                        </div>
+                  </button>
+                </div>
+
+                <div class="circle">
+                  <button id="rock-button"><i style="font-size:24px" class="fa">&#xf255;</i>
+                        <div class="tooltip">
+                           <span class="tooltip-text">Rock</span>
+                        </div>
+                  </button>
+                </div>
+
+                <div class="circle">
+                  <button id="scissors-button"><i style="font-size:24px" class="fa">&#xf257;</i>
+                        <div class="tooltip">
+                           <span class="tooltip-text">Scissors</span>
+                        </div>
+                    </button>
+                </div>
+           </div> 
+
+           <button class="auto-play-button" id="js-auto-play">Auto Play</button>
+           <button class="reset-button" id="reset-button">Reset score
+           </button>
+       </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

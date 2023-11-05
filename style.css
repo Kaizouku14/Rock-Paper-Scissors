@@ -1,0 +1,175 @@
+body , p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins,Arial, Helvetica, sans-serif;
+ }
+   
+ .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+ }
+
+ .div-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 28%;
+    height: 300px;
+    gap: 15px;
+    background-color: lightblue;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+.items{
+    display: flex;
+    gap: 15px;
+}
+
+.result-board{
+    text-align: center;
+ }
+
+ .circle{
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    transition: background-color 0.15s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .reset-button{
+    border: 1px solid rgb(71, 164, 196);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: rgb(71, 164, 196) ;
+    padding: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.40s;
+ }
+
+ .auto-play-button{
+   border: 1px solid rgb(71, 164, 196);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: rgb(71, 164, 196) ;
+    padding: 5px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.40s;
+ }
+
+ .reset-button:hover, .auto-play-button:hover{
+    background-color: rgb(71, 164, 196);
+    color: white;
+ }
+
+ .circle button{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #bbb;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.15s;
+ }
+
+  .tooltip{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+  }
+
+  .tooltip span{
+    color: white;
+    background-color: rgb(112, 112, 112);
+    padding: 4px;
+    font-size: 0.75rem;
+    border-radius: 10px;
+  }
+
+  button:hover .tooltip{
+    opacity: 1;
+  }
+
+   .circle:hover, .circle:hover button{
+    background-color: #fcfcfc;
+  }
+
+  .Title{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 5px 5px rgba(12, 12, 12, 0.1);
+    animation: myAnim 1s cubic-bezier(0.64, 0, 0.78, 0) 1s infinite reverse backwards;
+ }
+
+
+ @keyframes myAnim {
+    0% {
+       transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+       transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+       transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+       transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+       transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+       transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+       transform: scale3d(1, 1, 1);
+    }
+ }
+
+ @media (max-width: 800px){
+    .container{
+       flex-direction: column;
+    }
+
+    .div-content{
+       width: 365px;
+    }
+ }
